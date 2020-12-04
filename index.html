@@ -1,0 +1,149 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Gradient site</title>
+<link rel="stylesheet" href="css/style.css"/>
+	<!--font-awesome-->
+<script src="https://kit.fontawesome.com/c8e4d183c2.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<section>
+<!--main--------------------------->
+<div class="main-page">
+<div class="navigation-container">
+
+	<!--logo-->
+	<a href="#" class="logo">B G <font color="#1ed7f4">MANCO</font></a>
+	<!--menu-->
+	<div class="menu">
+	<ul>
+	<li><a href="#">Product</a></li>
+	<li><a href="#">About Us</a></li>
+	<li><a href="#">Contact US</a></li>
+	<li><a href="#">Technology</a></li>
+	</ul>
+	</div>
+	<!--cart-->
+	<a href="#" class="cart"><img src="images/cart.png"></a>
+	
+</div>
+<!--text-->
+	<div class="text-container">
+	<p>B G <font color="#1ed7f4">MANCO</font></p>
+	<p>Awesome Website Design Using HTML And CSS</p>
+	<p>Half Blood Prince,Devolper</p>
+	</div>
+<!--PRODUCT-IMAGE-->
+	<!--1---------------------------->
+	<div class="product-img img1 ">
+	<img src="images/product-2.png">
+	</div>
+	<!--2---------------------------->
+	<div class="product-img img2 active-product">
+	<img src="images/product-1.png">
+	</div>
+	<!--3---------------------------->
+	<div class="product-img img3">
+	<img src="images/product-3.png">
+	</div>
+	<!--4---------------------------->
+	<div class="product-img img4">
+	<img src="images/product-4.png">
+	</div>
+	
+<!--tools--->
+<div class="tools">
+<!--order-now-->
+	<div class="order-now">
+	<a href="#">Order Now</a>
+	</div>
+<!--prescription-->
+	<div class="prescription">
+	<a href="#">Prescription</a>
+	</div>
+<!--more-details-->
+	<div class="more-details">
+	<a href="#">More-details</a>
+	</div>
+</div>
+</div>	
+<!--product-container-->
+<div class="product-container">
+
+	<div class="product-list">
+<!--1------------------------------>
+		<div class="box-1">
+		<!--heading-->
+		<p class="heading">Product-1</p>
+		<!--product-icon-->
+		<div class="p-icon">
+		<i class="fas fa-headphones-alt"></i>	
+		</div>
+		<!--type-->
+		<p class="type">Wireless<br>Headphone</p>
+		</div>
+<!--2------------------------------>
+		<div class="box-2 active">
+		<!--heading-->
+		<p class="heading">Product-2</p>
+		<!--product-icon-->
+		<div class="p-icon">
+		<i class="fas fa-shoe-prints"></i>	
+		</div>
+		<!--type-->
+		<p class="type">Nike<br>Sport Shoes</p>
+		</div>
+<!--3------------------------------>
+		<div class="box-3">
+		<p class="heading">Product-3</p>
+		<!--product-icon-->
+		<div class="p-icon">
+		<i class="far fa-clock"></i>	
+		</div>
+		<!--type-->
+			<p class="type">Vision<br>Supplements</p>
+		</div>
+<!--4------------------------------>
+		<div class="box-4">
+		<p class="heading">Product-4</p>
+		<!--product-icon-->
+		<div class="p-icon">
+		<i class="fas fa-camera"></i>	
+		</div>
+		<!--type-->
+			<p class="type">Locomotion<br>Victuals</p>	
+		</div>
+	
+	</div>
+	
+</div>
+</section>
+<!--JQuery.js--------------------->
+	<script src="js/JQuery3.3.1.js" type="text/javascript"></script>
+<!--script-------------->
+	<script type="text/javascript">
+		/*--active-box--*/
+	$(document).on('click','.box-1,.box-2,.box-3,.box-4',function(){
+	$(this).addClass('active').siblings().removeClass('active')
+});
+		/*product-Img active*/
+		$(document).on('click','.box-1',function(){
+	$('.img1').addClass('active-product').siblings('.img3,.img2,.img4').removeClass('active-product')
+});
+	
+		$(document).on('click','.box-2',function(){
+	$('.img2').addClass('active-product').siblings('.img3,.img1,.img4').removeClass('active-product')
+});
+		
+			$(document).on('click','.box-3',function(){
+	$('.img3').addClass('active-product').siblings('.img1,.img2,.img4').removeClass('active-product')
+});
+		
+			$(document).on('click','.box-4',function(){
+	$('.img4').addClass('active-product').siblings('.img3,.img2,.img1').removeClass('active-product')
+});
+		
+	</script>
+</body>
+</html>
